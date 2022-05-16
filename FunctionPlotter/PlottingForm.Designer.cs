@@ -78,6 +78,7 @@
             this.txtbx_expr.Name = "txtbx_expr";
             this.txtbx_expr.Size = new System.Drawing.Size(164, 20);
             this.txtbx_expr.TabIndex = 2;
+            this.txtbx_expr.TextChanged += new System.EventHandler(this.txtbx_expr_TextChanged);
             // 
             // lbl_expr_msg
             // 

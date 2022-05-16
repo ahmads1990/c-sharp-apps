@@ -32,14 +32,19 @@ namespace tasksForm
             if (inFixExpression == null){ return false; }
             postFixExpression = "";
             Stack<char> stack = new Stack<char>();
+
             //go throw each character
             for (int i = 0; i < inFixExpression.Length; i++)
             {
                 char c = inFixExpression[i];
                 //check if current char is number or digit just add to postFix string
-                if (char.IsLetterOrDigit(c)){postFixExpression += (c);}
+                if (char.IsLetterOrDigit(c))
+                {
+                    postFixExpression += (c); 
+                }
                 else
                 {
+                    if (!checkme(i)) { return false; }
                     int currentCharOrder = getOrder(c);
                     //check if its a symbol and get its order
                     //order 0 means character isnt a valid operator
@@ -56,7 +61,7 @@ namespace tasksForm
                             stack.Pop();
                         }
                         //if current char c order higher than operator in stack
-                        else if (currentCharOrder > getOrder(stack.Peek())){stack.Push(c);}
+                        else if (currentCharOrder > getOrder(stack.Peek())) { stack.Push(c); }
                         //else current char c order lower or equal than operator in stack
                         else
                         {
@@ -74,6 +79,25 @@ namespace tasksForm
             //at the end of string pop the remaning char in stack to postfix
             while (stack.Count != 0){postFixExpression += (stack.Pop());}
             return true;
+        }
+        private bool checkme(int i)
+        {
+            try
+            {
+                if (char.IsLetterOrDigit(inFixExpression[i - 1]) && char.IsLetterOrDigit(inFixExpression[i + 1]))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
         }
         //
         public float evaluateExpression(float xValue)
