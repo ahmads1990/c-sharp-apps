@@ -45,7 +45,6 @@ namespace tasksForm
                 }
                 else
                 {
-                    if (!checkme(i)) { return false; }
                     int currentCharOrder = getOrder(c);
                     //check if its a symbol and get its order
                     //order 0 means character isnt a valid operator
@@ -54,6 +53,7 @@ namespace tasksForm
                     {
                         //if stack empty just add it
                         if (stack.Count == 0) { stack.Push(c); }
+                        else if (c == '(') { stack.Push(c); }
                         else if (c == ')')
                         {
                             //go throw stack and pop operators til find opening brackets
@@ -80,25 +80,6 @@ namespace tasksForm
             //at the end of string pop the remaning char in stack to postfix
             while (stack.Count != 0){postFixExpression += (stack.Pop());}
             return true;
-        }
-        private bool checkme(int i)
-        {
-            try
-            {
-                if (char.IsLetterOrDigit(inFixExpression[i - 1]) && char.IsLetterOrDigit(inFixExpression[i + 1]))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch (Exception)
-            {
-                return false;
-                throw;
-            }
         }
         //
         public float evaluateExpression(float xValue)
@@ -171,7 +152,9 @@ namespace tasksForm
                 case '^':
                     return 3;
                 case '(':
-                    return 4;
+                    return -1;
+                case ')':
+                    return -2;
                 default:
                     return 0;
             }
