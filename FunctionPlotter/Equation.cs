@@ -30,6 +30,7 @@ namespace tasksForm
         {
             //check infix string
             if (inFixExpression == null){ return false; }
+            if (inFixExpression.Length < 3) { return false; }
             postFixExpression = "";
             Stack<char> stack = new Stack<char>();
 
