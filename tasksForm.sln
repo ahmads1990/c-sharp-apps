@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionPlotter", "Function
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionPlotterUnitTest", "FunctionPlotterUnitTest\FunctionPlotterUnitTest.csproj", "{DD026A97-9F8C-482C-A7AB-604589746094}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayFlatten", "ArrayFlatten\ArrayFlatten.csproj", "{32B7CA7C-017B-4861-A8F8-17EA02710DDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DD026A97-9F8C-482C-A7AB-604589746094}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD026A97-9F8C-482C-A7AB-604589746094}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD026A97-9F8C-482C-A7AB-604589746094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B7CA7C-017B-4861-A8F8-17EA02710DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B7CA7C-017B-4861-A8F8-17EA02710DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B7CA7C-017B-4861-A8F8-17EA02710DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B7CA7C-017B-4861-A8F8-17EA02710DDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
