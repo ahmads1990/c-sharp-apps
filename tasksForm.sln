@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionPlotterUnitTest", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayFlatten", "ArrayFlatten\ArrayFlatten.csproj", "{32B7CA7C-017B-4861-A8F8-17EA02710DDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopologyJsonParser", "TopologyJsonParser\TopologyJsonParser.csproj", "{485E7470-158F-47B9-B469-0E05B91E545E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{32B7CA7C-017B-4861-A8F8-17EA02710DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32B7CA7C-017B-4861-A8F8-17EA02710DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32B7CA7C-017B-4861-A8F8-17EA02710DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{485E7470-158F-47B9-B469-0E05B91E545E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{485E7470-158F-47B9-B469-0E05B91E545E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{485E7470-158F-47B9-B469-0E05B91E545E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{485E7470-158F-47B9-B469-0E05B91E545E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
