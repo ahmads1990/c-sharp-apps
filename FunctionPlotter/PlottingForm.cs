@@ -48,17 +48,19 @@ namespace FunctionPlotter
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!getXRanges())
+            {
+                return;
+            }
             generateXValues();
             //plotEquation.addNewExpression(txtbx_expr.Text.ToString());
             /*
             plotEquation.addNewExpression("5*x^3+2*3");
             plotEquation.parseExpression();
             */
-            if (!getXRanges())
-            {
-                return;
-            }
+        
             yValues = plotEquation.evaluateArray(xValues);
+            if (chart1.Series.Count > 0) { chart1.Series.RemoveAt(0); };
             chart1.Series.Add("Series1");
             chart1.Series["Series1"].ChartType = SeriesChartType.Spline;
 
@@ -86,7 +88,7 @@ namespace FunctionPlotter
             try
             {
                 xMin = float.Parse(txtbx_x_min.Text.ToString());
-                xMax = float.Parse(txtbx_x_max.Text.ToString());
+                xMax = float.Parse(txtbx_x_max.Text);
                 StepSize = float.Parse(txtbx_x_stepsize.Text.ToString());
             }
             catch (Exception)

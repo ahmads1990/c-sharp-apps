@@ -106,7 +106,7 @@ namespace TopologyJsonParser
         bool deleteTopology(int topologyID)
         {
             topology topoToBeDeleted = null;
-            foreach (var item in topologies)
+            foreach (var item in topologyList)
             {
                 if (int.Parse(item.topologyId) == topologyID) { topoToBeDeleted = item; }
             }
